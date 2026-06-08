@@ -46,6 +46,29 @@ npm install
 npm run dev
 ```
 
+## 📸 Project Screenshots
+
+### 🏠 Home Page
+![Home Page](screenshots/home-page.png)
+
+### 📝 User Registration
+![Signup Page](screenshots/signup-page.png)
+
+### 📚 Course Management
+![Course Management](screenshots/course-management.png)
+
+### 👨‍🏫 Trainer Details
+![Trainer Details](screenshots/trainer-details.png)
+
+### 📋 Assignments Page
+![Assignments Page](screenshots/assignments-page.png)
+
+### 📞 Contact Page
+![Contact Page](screenshots/contact-page.png)
+
+### 🗄️ Database (PostgreSQL)
+![Database](screenshots/database-course-table.png)
+
 ## Author
 
 **Saniya Shirin**

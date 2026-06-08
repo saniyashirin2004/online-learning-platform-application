@@ -61,7 +61,7 @@ npm run dev
 ![Trainer Details](Snapshots/TrainersDetail-page.png)
 
 ### Assignment Page
-![Assignment Page](Snapshots/Assignment-page.png)
+![Assaignment Page](Snapshots/Assignment-page.png)
 
 ### Contact Page
 ![Contact Page](Snapshots/ContactDetail-page.png)

@@ -46,28 +46,28 @@ npm install
 npm run dev
 ```
 
-## 📸 Project Screenshots
+## Project Screenshots
 
-### 🏠 Home Page
-![Home Page](screenshots/home-page.png)
+### Home Page
+![Home Page](Snapshots/home-page.png)
 
-### 📝 User Registration
-![Signup Page](screenshots/signup-page.png)
+### Signup Page
+![Signup Page](Snapshots/Signup-page.png)
 
-### 📚 Course Management
-![Course Management](screenshots/course-management.png)
+### Courses Page
+![Courses Page](Snapshots/Courses-page.png)
 
-### 👨‍🏫 Trainer Details
-![Trainer Details](screenshots/trainer-details.png)
+### Trainers Details
+![Trainer Details](Snapshots/TrainersDetail-page.png)
 
-### 📋 Assignments Page
-![Assignments Page](screenshots/assignments-page.png)
+### Assignment Page
+![Assignment Page](Snapshots/Assignment-page.png)
 
-### 📞 Contact Page
-![Contact Page](screenshots/contact-page.png)
+### Contact Page
+![Contact Page](Snapshots/ContactDetail-page.png)
 
-### 🗄️ Database (PostgreSQL)
-![Database](screenshots/database-course-table.png)
+### Database
+![Database](Snapshots/Database.png)
 
 ## Author
 

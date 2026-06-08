@@ -60,7 +60,7 @@ npm run dev
 ### Trainers Details
 ![Trainer Details](Snapshots/TrainersDetail-page.png)
 
-### Assignment Page
+### Assaignment Page
 ![Assaignment Page](Snapshots/Assignment-page.png)
 
 ### Contact Page

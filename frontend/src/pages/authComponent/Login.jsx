@@ -3,44 +3,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
-// const Login = () => {
-
-//   let [email, setEmail] = useState('');
-//   let [password, sePassword] = useState('');
-//   let navigate = useNavigate();
-
-//   let handleEmail = (e) => {
-//     setEmail(e.target.value)
-//   }
-//   let handlePassword = (e) => {
-//     sePassword(e.target.value)
-//   }
-
-//   let handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log("Form Submitted")
-
-//     axios.get(`http://localhost:8080/register?email=${email}&password=${password}`)
-//       .then((res) => {
-//         console.log(res.data);
-//         if (res.data.length > 0) {
-//           toast.success("Login Successfull")
-//           localStorage.setItem("userDegtails", JSON.stringify(res.data));
-//           localStorage.setItem("isLoggedIn", "true")
-
-//           localStorage.setItem('token',res.data)
-//           setEmail("");
-//           sePassword("");
-//           setTimeout(() => {
-//             navigate('/');
-//           }, 2000)
-
-//         } else {
-//           toast.error("Invaild User Details")
-//         }
-//       })
-//   }
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -56,54 +18,46 @@ const Login = () => {
 
     try {
       const response = await axios.post(
-        "/api/auth/login",
+        "https://online-learning-platform-application.onrender.com/api/auth/login",
         loginData,
         {
           headers: {
             "Content-Type": "application/json",
           },
-        },
+        }
       );
 
-      toast.success("Login Successful");
+      if (response.data && response.data.data) {
+        toast.success("Login Successful");
 
-      // assuming backend returns user + token
-      localStorage.setItem("userDetails", JSON.stringify(response.data.data));
-      // localStorage.setItem("token", response.data.token);
-      localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem(
+          "userDetails",
+          JSON.stringify(response.data.data)
+        );
 
-      setEmail("");
-      setPassword("");
+        localStorage.setItem("isLoggedIn", "true");
 
-      setTimeout(() => {
-        navigate("/");
-      }, 1500);
+        setEmail("");
+        setPassword("");
+
+        setTimeout(() => {
+          navigate("/");
+        }, 1500);
+      } else {
+        toast.error(response.data.message || "Invalid credentials");
+      }
     } catch (err) {
-      toast.error(err.response?.data?.message || "Invalid credentials");
+      console.error("Login Error:", err);
+      toast.error(
+        err.response?.data?.message || "Login failed. Please try again."
+      );
     }
   };
+
   return (
-    //  <form onSubmit={handleSubmit} className='register-form'>
-    //             <ToastContainer />
-    //             <fieldset>
-    //                 <legend>Login</legend>
-
-    //                 <label htmlFor="email">Email:</label>
-    //                 <input type="email" id='email' placeholder='Enter Email' name='email' onChange={handleEmail} />
-
-    //                 <label htmlFor="password">Password:</label>
-    //                 <input type="password" id='password' placeholder='Enter Password' name='password' onChange={handlePassword} />
-
-    //                 <div className="button-container">
-    //                     <button type="submit">Submit</button>
-    //                     <button type="reset" onClick={() => setUserData({ username: "", phone: "", email: "", password: "", age: "" })}>Reset</button>
-    //                 </div>
-
-    //             </fieldset>
-    //         </form>
-
     <form onSubmit={handleSubmit} className="register-form">
       <ToastContainer />
+
       <fieldset>
         <legend>Login</legend>
 
@@ -131,6 +85,7 @@ const Login = () => {
 
         <div className="button-container">
           <button type="submit">Submit</button>
+
           <button
             type="reset"
             onClick={() => {

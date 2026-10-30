@@ -1,0 +1,61 @@
+{
+  "register": [
+    {
+      "id": "b1b3",
+      "username": "Prajwal",
+      "phone": "9874563210",
+      "email": "p@gmail.com",
+      "password": "123",
+      "age": "25"
+    },
+    {
+      "id": "75fe",
+      "username": "Balaji",
+      "phone": "9876543212",
+      "email": "balaji@gmail.com",
+      "password": "12345",
+      "age": "23"
+    },
+    {
+      "id": "f5ff",
+      "username": "Prajwal",
+      "phone": "8095460172",
+      "email": "p@gmail.com",
+      "password": "12",
+      "age": ""
+    },
+    {
+      "id": "c93d",
+      "username": "Prajwal",
+      "phone": "",
+      "email": "p@gmail.com",
+      "password": "123",
+      "age": "25"
+    }
+  ],
+  "contact": [
+    {
+      "id": "4fbe",
+      "name": "Chintu",
+      "email": "chintu@gmail.com",
+      "phone": "9874563210",
+      "message": "Hai bro had hu lunch ,bye bye c u later "
+    },
+    {
+      "id": "e9ed",
+      "name": "Chintu",
+      "email": "chintu@gmail.com",
+      "phone": "9874563210",
+      "message": "Hai bro"
+    }
+  ],
+  "courses": [
+    {
+      "id": "7c22",
+      "courseName": "Java Full Stack",
+      "duration": "5 months",
+      "trainerName": "Balaji P",
+      "startDate": "2026-02-02"
+    }
+  ]
+}
